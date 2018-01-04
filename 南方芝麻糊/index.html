@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				border: none;
+			}
+			.body{
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+			}
+			.bx{
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				position: relative;
+			}
+			.bg{
+				width: 100vw;
+				height: 100vh;
+			}
+			.logo{
+				width:15vw;
+				position: absolute;
+				top:2%;
+				right:2%;
+			}
+			.h{
+				width:35vw;
+				position: absolute;
+				top:30%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.load_p{
+				font-size: 20px;
+				font-family: "微软雅黑";
+				color: orange;
+				position: absolute;
+				top:60%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.load span{
+				font-size: 22px;
+				font-family: "微软雅黑";
+				color: orange;
+				position: absolute;
+				top:70%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.p2_hou{
+				width:48vw;
+				position: absolute;
+				top:60%;
+				left:5%;
+			}
+			.p2_anniu{
+				width:100%;
+				position: absolute;
+				bottom:1%;
+			}
+			.anniu{
+				width: 52vw;
+				height: 9vh;
+				background: gray;
+				position: absolute;
+				left: 25%;
+				bottom:4%;
+				transform: rotate(-8deg);
+				opacity: 0;
+			}
+			.go{
+				width: 100vw;
+				height: 100vh;
+				overflow: hidden;
+				position: relative;
+				/*display: none;*/
+			}
+			.text{
+				width: 80vw;
+				position: absolute;
+				top:25%;
+				left:13%;
+				font-size:12px;
+				font-family: "微软雅黑";
+				color: #fff;
+				line-height:20px;
+			}
+			.text p{
+				font-size: 16px;
+				margin-top: 3%;
+			}
+			.text li{
+				margin-left:15px;
+			}
+			.quan{
+				width:80vw;
+				position: absolute;
+				top:57%;
+				left:13%;
+			}
+			.go_anniu{
+				width:20vw;
+				position: absolute;
+				bottom:5%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.qq{
+				width: 80vw;
+				position: absolute;
+				top:5%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.qus{
+				width: 80vw;
+			}
+			.qu{
+				width: 55vw;
+				position: absolute;
+				top:10%;
+				left:23%
+			}
+			.num{
+				position: absolute;
+				top:55%;
+				left:8.5%;
+			}
+			.div img{
+				width: 45vw;
+				position: absolute;
+				top:22%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.aa{
+				width: 80vw;
+				position: absolute;
+				top:47%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.a{
+				width: 80vw;
+			}
+			.dc1{
+				width:10vw;
+				position: absolute;
+				top:18%;
+				left:80%;
+			}
+			.sp1{
+				position: absolute;
+				top:20%;
+				left:26%;
+			}
+			.bb{
+				width: 80vw;
+				position: absolute;
+				top:60%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.b{
+				width: 80vw;
+			}
+			.dc2{
+				width:10vw;
+				position: absolute;
+				top:18%;
+				left:80%;
+			}
+			.sp2{
+				position: absolute;
+				top:20%;
+				left:26%;
+			}
+			.cc{
+				width: 80vw;
+				position: absolute;
+				top:73%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.c{
+				width: 80vw;
+			}
+			.dc3{
+				width:10vw;
+				position: absolute;
+				top:18%;
+				left:80%;
+			}
+			.sp3{
+				position: absolute;
+				top:20%;
+				left:26%;
+			}
+			.dd{
+				width: 80vw;
+				position: absolute;
+				top:86%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.d{
+				width: 80vw;
+			}
+			.dc4{
+				width:10vw;
+				position: absolute;
+				top:18%;
+				left:80%;
+			}
+			.sp4{
+				position: absolute;
+				top:20%;
+				left:26%;
+			}
+			.dc{
+				display:none;
+			}
+			.txt{
+				font-size: 22px;
+				font-family: "微软雅黑";
+				color:#502e35;
+				position: absolute;
+				top:25%;
+				left:20%;
+			}
+			.txt span{
+				color: yellow;
+			}
+			.ch{
+				width: 60vw;
+				position: absolute;
+				top:32%;
+				left:18%;
+			}
+			.xuezhe{
+				font-size: 30px;
+				font-family: "微软雅黑";
+				color:#502e35;
+				position: absolute;
+				top:41.5%;
+				left:26%;
+			}
+			.good{
+				font-size: 20px;
+				font-family: "微软雅黑";
+				color:yellow;
+				position: absolute;
+				top:58%;
+				left:13%;
+			}
+			.pyq{
+				width: 42vw;
+				position: absolute;
+				left:25%;
+				bottom:0;
+			}
+			.again{
+				width: 42vw;
+				position: absolute;
+				left:5%;
+				bottom:0;
+			}
+			.chou{
+				width: 42vw;
+				position: absolute;
+				left:52%;
+				bottom:0;
+			}
+			.strong{
+				display: none;
+			}
+			.loser{
+				display: none;
+			}
+			.zhu{
+				width: 35vw;
+				position: absolute;
+				top:32%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.out{
+				width: 35vw;
+				position: absolute;
+				top:60%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.cha{
+				font-size: 20px;
+				font-family: "微软雅黑";
+				color:yellow;
+				position: absolute;
+				top:68%;
+				left:22%;
+			}
+			.again1{
+				width: 42vw;
+				position: absolute;
+				left:5%;
+				bottom:0;
+			}
+			.fight{
+				width: 42vw;
+				position: absolute;
+				left:52%;
+				bottom:0;
+			}
+			.quan1{
+				width: 60vw;
+				position: absolute;
+				top:30%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.again2{
+				width: 42vw;
+				position: absolute;
+				left:5%;
+				bottom:0;
+			}
+			.chou1{
+				width: 42vw;
+				position: absolute;
+				left:52%;
+				bottom:0;
+			}
+			.name{
+				width: 60vw;
+				position: absolute;
+				top:30%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.xinxi{
+				width: 50vw;
+				height: 40vw;
+				position: absolute;
+				top:47%;
+				left:50%;
+				transform: translate(-50%);
+			}
+			.xinxi span{
+				font-size: 16px;
+				font-family: "微软雅黑";
+				padding-left:5px;
+			}
+			.xinxi input{
+				width: 35vw;
+				height: 4vh;
+				margin-top:10px ;
+				border-bottom:1px black solid;
+			}
+			.xinxi button{
+				width: 15vw;
+				height: 4vh;
+				border: 1px black solid;
+				border-radius: 1vh;
+				margin-top:20px ;
+				position: absolute;
+				right:10%;
+			}
+			.again3{
+				width: 42vw;
+				position: absolute;
+				left:5%;
+				bottom:0;
+			}	
+			.fight1{
+				width: 42vw;
+				position: absolute;
+				left:52%;
+				bottom:0;
+			}
+			.p{
+				font-size:28px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="body">
+		<!--loading-->
+		<div class="load bx">
+			<img class="bg" src="img/bg.jpg" /> 
+			<img class="logo" src="img/logo.png"/>
+			<img class="h" src="img/load_h1.png" />
+			<p class="load_p">0%</p>
+			<span>Loading.....</span>
+		</div>
+		
+		<!--新知识get界面-->
+		<div class="get bx">
+			<img class="bg" src="img/bg2.jpg" />
+			<img class="logo" src="img/logo.png"/>
+			<img class="p2_hou" src="img/p2_hou.png" />
+			<img class="p2_anniu" src="img/p2_anniu.png" />
+			<div class="anniu"></div>
+		</div>
+		
+		<!--go界面-->
+		<div class="go bx"  id="go">
+			<img class="bg" src="img/bg3.jpg" />
+			<img class="logo" src="img/logo.png"/>
+			<div class="text">
+				<p>悟空喊你来答题，万元奖品等着你！</p>
+				<p>活动机制：</p>
+				<ul>
+					<li>每次测试共10道题目，请根据问题选择正确答案，答题时间不限。</li>
+					<li>答对1题得1分，答对5题或者5题以上，即可获得抽奖1次</li>
+					<li>本次活动奖品价值超过1万元，包括电商优惠券、袋装黑芝麻糊、盒装黑芝麻糊、巴马黑八珍。</li>
+				</ul>
+				<p>活动时间：</p>
+				<span>12月9日-12月13日</span>
+			</div>
+			<img class="quan" src="img/quanjiafu.png" />
+			<img class="go_anniu" src="img/go.png" />
+		</div>
+		
+		<!--问答界面-->
+		<div class="question bx" id="question">
+			<img class="bg" src="img/bg.jpg" />
+			<div class="qq">
+				<img class="qus" src="img/question.png" />
+				<span class="qu">121</span>
+				<span class="num">01</span>
+			</div>
+			<div class="div">
+				<img src="images/pic1.png" />
+			</div>
+			<div class="aa">
+				<img class="a" src="img/a.png" />
+				<span class="sp1 p">qwer</span>
+				<img class="dc1 dc" src="" />
+			</div>
+			<div class="bb">
+				<img class="b" src="img/b.png" />
+				<span class="sp2 p">23wr</span>
+				<img class="dc2 dc" src="" />
+			</div>
+			<div class="cc">
+				<img class="c" src="img/c.png" />
+				<span class="sp3 p">qw</span>
+				<img class="dc3 dc" src="" />
+			</div>
+			<div class="dd">
+				<img class="d" src="img/d.png" />
+				<span class="sp4 p">qa</span>
+				<img class="dc4 dc" src="" />
+			</div>		
+		</div>
+		
+		<!--结束界面-->
+		<div class="end bx" id="end">
+			<img class="bg" src="img/bg3.jpg" />
+			<img class="logo" src="img/logo.png" />
+			<div class="strong">
+				<p class="txt">您答对了<span class="t3">1</span>题，获得<span class="t4">1</span>分</p>
+				<img class="ch" src="img/chenghao.png" />
+				<span class="xuezhe">西游一级学者</span>
+				<p class="good">&nbsp;&nbsp;&nbsp;太棒啦，你已经可以抽奖啦！！<br />你离学霸只差喝一罐芝麻糊的距离！</p>
+				<img class="pyq" src="img/pyq.png" />
+				<img class="again" src="img/again_03.png" />
+				<img class="chou" src="img/choujiang.png" />
+			</div>
+			<div class="loser">
+				<p class="txt">您答对了<span class="t1">1</span>题，获得<span class="t2">1</span>分</p>
+				<img class="zhu" src="img/outzhu.png" />
+				<img class="out" src="img/out.png" />
+				<p class="cha">还差一点点就可以抽奖了！~</p>
+				<img class="again1" src="img/again_03.png" />
+				<img class="fight" src="img/fight.png" />
+			</div>
+		</div>
+		
+		<!--抽奖环节-->
+		<div class="choujiang bx" id="choujiang">
+			<img class="bg" src="img/bg3.jpg" />
+			<img class="logo" src="img/logo.png"/>
+			<img class="quan1" src="" />
+			<img class="again2" src="img/again_03.png" />
+			<img class="chou1" src="img/choujiang.png" />
+		</div>
+		
+		<!--填写资料-->
+		<div class="form bx" id="form">
+			<img class="bg" src="img/bg3.jpg" />
+			<img class="logo" src="img/logo.png"/>
+			<img class="name" src="img/name.png" />
+			<div class="xinxi" method="get">
+				<span>姓名：</span><input class="xinming" type="text" value="" name="xm" /><br />
+				<span>手机：</span><input class="tel" type="text" value="" name="t" /><br />
+				<span>邮箱：</span><input class="email" type="text" value="" name="e" /><br />
+				<button type="submit" class="sub">提交</button>
+			</div>
+			<img class="again3" src="img/again_03.png" />
+			<img class="fight1" src="img/fight.png" />
+		</div>
+		
+		</div>
+	</body>
+	
+	<script type="text/javascript">
+		var hou = document.querySelector('.h');
+		var d1 = document.querySelector('.load');
+		var d2 = document.querySelector('.get');
+		var wk = document.querySelector('.p2_hou');
+		var p2_anniu = document.querySelector('.p2_anniu');
+		var get = document.querySelector('.anniu');
+		var go = document.querySelector('.go_anniu');
+		var qus = document.querySelector('.qq'),
+			a = document.querySelector('.aa'),
+			b = document.querySelector('.bb'),
+			c = document.querySelector('.cc'),
+			d = document.querySelector('.dd');
+		var pic = document.querySelector('.div img');
+		var qu = document.querySelector('.qu'),
+			sp1 = document.querySelector('.sp1'),
+			sp2 = document.querySelector('.sp2'),
+			sp3 = document.querySelector('.sp3'),
+			sp4 = document.querySelector('.sp4'),
+			num = document.querySelector('.num');
+		var dc1 = document.querySelector('.dc1'),
+			dc2 = document.querySelector('.dc2'),
+			dc3 = document.querySelector('.dc3'),
+			dc4 = document.querySelector('.dc4'),
+			dc = document.querySelectorAll('.dc');
+		var t1 = document.querySelector('.t1'),
+			t2 = document.querySelector('.t2'),
+			chen = document.querySelector('.xuezhe'),
+			again = document.querySelector('.again'),
+			pyq = document.querySelector('.pyq'),
+			chou = document.querySelector('.chou');
+		var strong = document.querySelector('.strong');
+		var loser = document.querySelector('.loser');
+		var again1 = document.querySelector('.again1'),
+			t3 = document.querySelector('.t3'),
+			t4 = document.querySelector('.t4'),
+			fight = document.querySelector('.fight');
+		var quan1 = document.querySelector('.quan1');
+		var again2 = document.querySelector('.again2');
+		var chou1 = document.querySelector('.chou1');
+		var again3 = document.querySelector('.again3');
+		var fight1 = document.querySelector('.fight1');
+		var xinming = document.querySelector('.xinming'),
+			tel = document.querySelector('.tel'),
+			email = document.querySelector('.email'),
+			sub = document.querySelector('.sub');
+		
+		//悟空自己动的动画
+		var n = 0;
+		var arr = ["img/load_h1.png","img/load_h2.png","img/load_3_03.png"]
+		var h = setInterval(function() {
+			hou.src = arr[n];
+			n++;
+			if(n >= 3) {
+				n = 0;
+			}
+		}, 200)
+					
+		//loading部分动画	
+		//预加载
+		var brr = ['img/a.png','img/again_03.png','img/b.png','img/bg.jpg','img/bg2.jpg','img/bg3.jpg','img/c.png','img/chenghao.png','img/choujiang.png','img/cuo.png','img/d.png','img/dui.png','img/fight.png','img/go.png','img/logo.png','img/name.png','img/out.png','img/outzhu.png','img/p2_anniu.png','img/p2_hou.png','img/pyq.png','img/quanjiafu.png','img/question.png','img/youhui15.png','img/youhui5.png','images/pic1.png','images/pic10.png','images/pic11.png','images/pic12.png','images/pic13.png','images/pic14.png','images/pic15.png','images/pic16.png','images/pic17.png','images/pic18.png','images/pic19.png','images/pic2.png','images/pic20.png','images/pic21.png','images/pic22.png','images/pic23.png','images/pic24.png','images/pic25.png','images/pic26.png','images/pic27.png','images/pic28.png','images/pic29.png','images/pic3.png','images/pic30.png','images/pic4.png','images/pic5.png','images/pic6.png','images/pic7.png','images/pic8.png','images/pic9.png']
+		var count = 0;
+		for(var i=0;i<brr.length;i++){
+			var img = new Image();
+			img.src = brr[i];
+			
+			//加载全部
+			img.onload = function(){
+				count++;
+				//数字预加载
+				var s = Math.floor(count/brr.length*100);
+				document.querySelector(".load_p").innerText = s + "%";
+				
+				if(count==brr.length){
+					console.log(count)
+					d1.style.display = 'none';
+					d2.style.display = 'block';
+				}
+			}
+		}
+		
+		//新知识get界面悟空动画
+		var h2 = setInterval(function(){
+			if(wk.style.top == '60%'){
+				wk.style.top = '64%';
+				wk.style.transition = '1s';
+			}
+			else{
+				wk.style.top = '60%';
+			}
+		},600)
+		
+		//新知识get点击事件
+		get.onclick = function(){
+			//get动画
+			$(".p2_anniu").animate({
+				bottom:'2%'
+			},function(){
+				console.log("动画结束")     //回调函数
+				$(".p2_anniu").animate({bottom:'1%'})
+			})
+						
+			setTimeout(function(){
+				window.location.hash = '#go'
+			},500)
+		}
+					
+		function total(){
+			//go点击事件
+			go.onclick = function(){
+				//get动画
+				$(".go_anniu").animate({
+					bottom:'6%'
+				},function(){
+					$(".go_anniu").animate({bottom:'5%'})
+				})
+							
+				setTimeout(function(){
+					location.hash = '#question';
+					dc1.style.display = 'none';
+					dc2.style.display = 'none';
+					dc3.style.display = 'none';
+					dc4.style.display = 'none';
+				},500)
+			}
+			//问答界面的问题和答案
+			var questionList = {
+			    brand: [
+			        {question: '“黑~芝麻糊~~~哎”,南方黑芝麻的经典广告片“叫卖篇”哪一年在电视上风靡全国？', answer:[["2046年",0],["1990年",0],["1991年",1],["1997年",0]],icon:22},
+			        {question: '“南方黑芝麻”品牌发源地在哪里呢？', answer:[["南极",0],["南山南",0],["广西南宁",0],["广西容县",1]],icon:23},
+			        {question: '砖家建议，一天吃多少克黑芝麻为宜？', answer:[["30-40g",0],["90-100g",0],["10-15g",1],["想吃多少吃多少",0]],icon:24},
+			        {question: '下面不属于黑芝麻功能特性的是？', answer:[["抗衰老",0],["提高生育能力",0],["黑头发",0],["得道成仙",1]],icon:25},
+			        {question: '100g黑芝麻的含钙量是100g牛奶含钙量的多少倍？', answer:[["100倍",0],["10倍",0],["7.5倍",1],["15倍",0]],icon:26},
+			        {question: '南方黑芝麻糊2015年的最新广告片“音乐篇”中，翩翩起舞的女主角身穿什么颜色的裙子呢？', answer:[["黑色",0],["黄色",1],["蓝色",0],["粉色",0]],icon:27},
+			        {question: '这是一道送分题，双12晚上，几点几分锁定浙江卫视可以看南到方黑芝麻糊冠名的《西游奇遇记》首播？', answer:[["20：20",1],["20：10",0],["20：00",0],["20：30",0]],icon:28},
+			        {question: '南方黑芝麻糊冠名的《西游奇遇记》里金星老师扮演的是？', answer:[["白龙马",0],["女儿国国王",0],["太白金星",1],["观音菩萨",0]],icon:29},
+			        {question: '南方黑芝麻糊冠名的《西游奇遇记》首站在哪里拍摄的？', answer:[["花果山",0],["西安",1],["火焰山",0],["北京",0]],icon:30}
+			    ],
+			    xiyou: [
+			        {question: '牛魔王的老婆“铁扇公主”又名？', answer:[["小甜甜",0],["红佛女",0],["药叉女",0],["罗刹女",1]],icon:1},
+			        {question: '八戒为什么长的像个猪？', answer:[["整容失败",0],["他本来就那模样",0],["投错了胎",1],["他喜欢猪，故意变成这样",0]],icon:2},
+			        {question: '玉皇大帝和王母娘娘到底什么关系？', answer:[["夫妻",0],["母子",0],["同事",1],["不清不楚的关系",0]],icon:3},
+			        {question: '黑熊精偷了唐僧的袈裟是为什么？', answer:[["别人的就是好的",0],["开生日趴体",1],["穿的拉轰、能泡妞",0],["金光闪闪，壕气",0]],icon:4},
+			        {question: '二郎神和玉帝是什么关系？', answer:[["父子",0],["叔侄",1],["基友",0],["蓝朋友",0]],icon:5},
+			        {question: '菩提始祖为什么轰走了孙悟空？', answer:[["猴子吃的太多",0],["猴子长的太帅",0],["猴子是逗逼",0],["猴子装逼",1]],icon:6},
+			        {question: '白龙马是谁的儿子？', answer:[["东海龙王",0],["南海龙王",0],["北海龙王",0],["西海龙王",1]],icon:7},
+			        {question: '通天河里的妖怪原本是观音菩萨池塘里的哪条鱼？', answer:[["鲤鱼",1],["鲶鱼",0],["金鱼",0],["金龙鱼",0]],icon:8},
+			        {question: '孙悟空师从何处？', answer:[["唐僧",0],["菩提老祖",1],["自学成才",0],["太白金星",0]],icon:9},
+			        {question: '西游记是谁写的？', answer:[["吴承恩",1],["吴奇隆",0],["吴孟达",0],["吴彦祖",0]],icon:10},
+			        {question: '原著中的孙悟空和下面哪个明星身高最接近？', answer:[["郭敬明",1],["隔壁老王",0],["何炅",0],["黄晓明",0]],icon:11},
+			        {question: '白龙马和被哪吒扒皮的龙三太子是什么关系？', answer:[["堂兄弟",1],["男朋友",0],["大舅舅",0],["好基友",0]],icon:12},
+			        {question: '当年是哪个妖精先谣言“吃唐僧肉可长生不老”？', answer:[["黑熊怪",0],["蛇精男",0],["狮驼洞三怪",0],["金角大王",1]],icon:13},
+			        {question: '要进盘丝洞，要先喊？', answer:[["傅文佩，你开门啊",0],["芝麻开门",1],["我是盘丝大仙",0],["妖精，哪里逃！",0]],icon:14},
+			        {question: '猪八戒前身“天蓬元帅”在天庭任什么职？', answer:[["总政少将",0],["陆军军委",0],["海军总司令",1],["志愿兵",0]],icon:15},
+			        {question: '红孩儿的真实年纪是？', answer:[["5岁",0],["300岁",1],["500岁",0],["100岁",0]],icon:16},
+			        {question: '孙悟空大闹蟠桃会，变成谁的样子骗吃骗喝？', answer:[["王母娘娘",0],["赤脚大仙",1],["太上老君",0],["太白金星",0]],icon:17},
+			        {question: '因为谁导致唐僧赶走孙悟空？', answer:[["孔雀公主",0],["白骨精",1],["狐狸精",0],["金鼻白毛鼠精",0]],icon:18},
+			        {question: '下列人物中没有喝过“孙、八、僧”三人组的圣水的是？', answer:[["虎力大仙",0],["鹿力大仙",0],["羊力大仙",0],["牛力大仙",1]],icon:19},
+			        {question: '第一个想娶唐僧的女妖怪是？', answer:[["凤姐",0],["琵琶精",1],["蝎子精",0],["玉兔精",0]],icon:20},
+			        {question: '太上老君的御用炼丹炉童子是？', answer:[["青狮魔王&白象魔王&大鹏魔王&虎威魔王",0],["奔波儿灞&灞波儿奔",0],["金角大王&银角大王",1],["辟寒大王&辟暑大王&辟尘大王",0]],icon:21}
+			    ]
+			}
+			
+			//定义两个数组
+			var crr = questionList.brand;
+			var crr1 = questionList.xiyou;
+			console.log(crr,crr1)
+			
+			//封装一个函数进行随机
+			function fn(min,max,len){
+				var drr = [];
+				var judge = false;
+				while(drr.length<len){
+					var r = Math.floor(Math.random()*(max-min)+min);
+					for(var i=0;i<drr.length;i++){
+						if(drr[i]==r){
+							judge = true;
+							break;
+						}
+					}
+					if(judge==false){
+						drr.push(r);
+					}
+					judge = false;
+				}
+				return drr;
+			}
+			
+			var drr3 = [];
+			//随机出三个黑芝麻的数组
+			var drr1 = fn(0,9,3);
+			for(var i = 0; i<drr1.length ;i++){
+				drr3.push(crr[drr1[i]])
+			}
+			//随机出七个西游的数组
+			var drr2 = fn(0,21,7);
+			for(var i = 0; i<drr2.length ;i++){
+				drr3.push(crr1[drr2[i]])
+			}
+			console.log(drr1,drr2,drr3)
+			//随机aaa[]数组中的位置
+			var aaa = [];
+			var bbb = fn(0,10,10);
+			for(var i = 0; i<bbb.length ;i++){
+				aaa.push(drr3[bbb[i]])
+			}
+			console.log(aaa)
+			
+			var pd = 0;
+			function tm(){
+				//问题的innerText
+				qu.innerText = aaa[pd].question;
+				qu.style.fontSize=Math.round(Math.sqrt(7000/qu.innerText.length))+'px'
+				//图片的随机
+				pic.src = "images/pic" + aaa[pd].icon + ".png";
+				
+				//答案的随机摆放
+				var an = [];
+				var an1 = fn(0,4,4);
+				for(var j = 0; j<an1.length ;j++){
+					an.push(aaa[pd].answer[an1[j]])
+				}
+				sp1.innerText = an[0][0];
+				if(sp1.innerText.length>8){
+					sp1.style.fontSize = '14px';
+				}else{
+					sp1.style.fontSize = '28px';
+				}
+				sp2.innerText = an[1][0];
+				if(sp2.innerText.length>8){
+					sp2.style.fontSize = '14px';
+				}else{
+					sp2.style.fontSize = '28px';
+				}
+				sp3.innerText = an[2][0];
+				if(sp3.innerText.length>8){
+					sp3.style.fontSize = '14px';
+				}else{
+					sp3.style.fontSize = '28px';
+				}
+				sp4.innerText = an[3][0];
+				if(sp4.innerText.length>8){
+					sp4.style.fontSize = '14px';
+				}else{
+					sp4.style.fontSize = '28px';
+				}
+				//对错的判断
+				for(var i = 0; i<an.length ;i++){
+					if(an[i][1] == 1){
+						dc[i].src = "img/dui.png";
+					}
+					else if(an[i][1] == 0){
+						dc[i].src = "img/cuo.png";
+					}
+				}
+			}
+			tm();
+			
+			//问答界面
+			var sum = 1;
+			var score = 0;
+			//a
+			a.onclick = function(){
+				//a动画
+				$(".aa").animate({
+					top:'48%'
+				},function(){
+					$(".aa").css({top:'47%'})
+				})
+				sum++;
+				dc1.style.display = 'block';
+				if(dc[0].src.search('dui')!= -1){
+					score++;
+					console.log(score)
+					//结束界面
+					t1.innerText = score;
+					t2.innerText = score;
+					t3.innerText = score;
+					t4.innerText = score;
+					var ccc = ['五','六','七','八','九','十']
+					if(score>=5){
+						strong.style.display = 'block';
+						loser.style.display =  'none';
+						chen.innerText = '西游'+ccc[score-5]+'级学者';
+					}
+					else if(score<5){
+						strong.style.display = 'none';
+						loser.style.display = 'block';
+					}
+				}
+				setTimeout(function(){
+					pd++;
+					tm();
+					dc1.style.display = 'none';
+					num.innerText = '0' + sum;
+				},500)
+				//游戏结束
+				if(sum>10){
+					setTimeout(function(){
+						window.location.hash = '#end'
+					},500)
+				}
+			}
+			//b
+			b.onclick = function(){
+				//b动画
+				$(".bb").animate({
+					top:'61%'
+				},function(){
+					$(".bb").css({top:'60%'})
+				})
+				sum++;
+				dc2.style.display = 'block';
+				if(dc[1].src.search('dui')!= -1){
+					score++;
+					//结束界面
+					t1.innerText = score;
+					t2.innerText = score;
+					t3.innerText = score;
+					t4.innerText = score;
+					var ccc = ['五','六','七','八','九','十']
+					if(score>=5){
+						strong.style.display = 'block';
+						loser.style.display =  'none';
+						chen.innerText = '西游'+ccc[score-5]+'级学者';
+					}
+					else if(score<5){
+						strong.style.display = 'none';
+						loser.style.display = 'block';
+					}
+				}
+				setTimeout(function(){
+					pd++;
+					tm();
+					dc2.style.display = 'none';
+					num.innerText = '0' + sum;
+				},500)
+				//游戏结束
+				if(sum>10){
+					setTimeout(function(){
+						window.location.hash = '#end'
+					},500)
+				}
+			}
+			//c
+			c.onclick = function(){
+				//c动画
+				$(".cc").animate({
+					top:'74%'
+				},function(){
+					$(".cc").css({top:'73%'})
+				})
+				sum++;
+				dc3.style.display = 'block';
+				if(dc[2].src.search('dui')!= -1){
+					score++;
+					//结束界面
+					t1.innerText = score;
+					t2.innerText = score;
+					t3.innerText = score;
+					t4.innerText = score;
+					var ccc = ['五','六','七','八','九','十']
+					if(score>=5){
+						strong.style.display = 'block';
+						loser.style.display =  'none';
+						chen.innerText = '西游'+ccc[score-5]+'级学者';
+					}
+					else if(score<5){
+						strong.style.display = 'none';
+						loser.style.display = 'block';
+					}
+				}
+				setTimeout(function(){
+					pd++;
+					tm();
+					dc3.style.display = 'none';
+					num.innerText = '0' + sum;
+				},500)
+				//游戏结束
+				if(sum>10){
+					setTimeout(function(){
+						window.location.hash = '#end'
+					},500)
+				}
+			}
+			//d
+			d.onclick = function(){
+				//d动画
+				$(".dd").animate({
+					top:'87%'
+				},function(){
+					$(".dd").css({top:'86%'})
+				})
+				sum++;
+				dc4.style.display = 'block';
+				if(dc[3].src.search('dui')!= -1){
+					score++;
+					//结束界面
+					t1.innerText = score;
+					t2.innerText = score;
+					t3.innerText = score;
+					t4.innerText = score;
+					var ccc = ['五','六','七','八','九','十']
+					if(score>=5){
+						strong.style.display = 'block';
+						loser.style.display =  'none';
+						chen.innerText = '西游'+ccc[score-5]+'级学者';
+					}
+					else if(score<5){
+						strong.style.display = 'none';
+						loser.style.display = 'block';
+					}
+				}
+				setTimeout(function(){
+					pd++;
+					tm();
+					dc4.style.display = 'none';
+					num.innerText = '0' + sum;
+				},500)
+				//游戏结束
+				if(sum>10){
+					setTimeout(function(){
+						window.location.hash = '#end'
+					},500)
+				}
+			}
+		}
+		total()
+		
+		//再玩一次
+		again.onclick = function(){
+			$(".again").animate({
+				bottom:'-2%'
+			},function(){
+				$(".again").animate({bottom:'0%'})
+			})
+			setTimeout(function(){
+				location.hash = "#go";
+				total()
+			},500)
+		}
+		//朋友圈
+		pyq.onclick = function(){
+			$(".pyq").animate({
+				bottom:'-2%'
+			},function(){
+				$(".pyq").animate({bottom:'0%'})
+			})
+		}
+		//抽奖环节
+		chou.onclick = function(){
+			$(".chou").animate({
+				bottom:'-2%'
+			},function(){
+				$(".chou").animate({bottom:'0%'})
+			})
+			setTimeout(function(){
+				location.hash = "#choujiang";
+			},500)
+		}
+		//再玩一次2
+		again1.onclick = function(){
+			$(".again1").animate({
+				bottom:'-2%'
+			},function(){
+				$(".again1").animate({bottom:'0%'})
+			})
+			setTimeout(function(){
+				location.hash = "#go";
+				total()
+			},500)
+		}
+		//朋友挑战环节
+		fight.onclick = function(){
+			$(".fight").animate({
+				bottom:'-2%'
+			},function(){
+				$(".fight").animate({bottom:'0%'})
+			})
+		}
+		
+		//抽奖环节
+		//随机优惠券
+		function suiji(){
+			var ddd = ['img/youhui5.png','img/youhui15.png'];
+			var youhui = Math.floor(Math.random()*2);
+			console.log(youhui);
+			quan1.src = ddd[youhui];
+			console.log(quan1);
+		}
+		suiji()
+		
+		//再玩一次3
+		again2.onclick = function(){
+			$(".again2").animate({
+				bottom:'-2%'
+			},function(){
+				$(".again2").animate({bottom:'0%'})
+			})
+			setTimeout(function(){
+				location.hash = "#go";
+				total()
+			},500)
+		}
+		//抽奖2
+		chou1.onclick = function(){
+			$(".chou1").animate({
+				bottom:'-2%'
+			},function(){
+				$(".chou1").animate({bottom:'0%'})
+			})
+			suiji()
+		}
+		//点击领取，填写资料
+		quan1.onclick = function(){
+			window.location.hash = "#form";
+		}
+		//再玩一次4
+		again3.onclick = function(){
+			$(".again3").animate({
+				bottom:'-2%'
+			},function(){
+				$(".again3").animate({bottom:'0%'})
+			})
+			setTimeout(function(){
+				location.hash = "#go";
+				total()
+			},500)
+		}
+		//朋友挑战环节2
+		fight1.onclick = function(){
+			$(".fight1").animate({
+				bottom:'-2%'
+			},function(){
+				$(".fight1").animate({bottom:'0%'})
+			})
+		}
+		
+		//姓名
+		var res1,res2,res3;
+		var xin = /[a-zA-Z\u4e00-\u9fa5]{1,}/;
+		xinming.addEventListener('blur',function(){
+			res1 = xin.test(xinming.value);
+			if(res1==false){
+				alert("请填写正确的姓名");
+				return
+			}
+		},false)
+		//手机号
+		var phone = /(86|0)?(1[345789]\d-?\d{4}-?\d{4})/;
+		tel.addEventListener('blur',function(){
+			res2 = phone.test(tel.value);
+			if(res2==false){
+				alert("请填写正确的手机号");
+				return
+			}
+		},false)
+		//邮箱
+		var mail = /^[A-Za-z0-9][\w-]{4,10}[A-Za-z0-9-]@[\w\.]+$/;
+		email.addEventListener('blur',function(){
+			res3 = mail.test(email.value);
+			if(res3==false){
+				alert("请填写正确的邮箱");
+				return
+			}
+		},false)
+		//提交按钮
+		sub.onclick = function(){
+			if(res1==true&&res2==true&&res3==true){
+				alert("提交成功，请耐心等耐")
+				return
+			}
+		}
+		
+	</script>
+</html>
